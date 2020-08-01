@@ -1,4 +1,5 @@
 .wrapper-header {
+  overflow: hidden;
   width: 100%;
   background: #dcbc81;
   color: #fff;

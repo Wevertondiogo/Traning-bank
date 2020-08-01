@@ -9,6 +9,13 @@ import { ContentComponent } from './content/content.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeLogadaComponent } from './home-logada/home-logada.component';
+import { AuthGuard } from './../../auth.guard';
+import { AuthService } from './../../auth.service';
+import { AcessoNegadoComponent } from './acesso-negado/acesso-negado.component';
+// import { LoginComponent } from './login/login.component';
+import { CadastroConcluidoComponent } from './cadastro-concluido/cadastro-concluido.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +24,19 @@ import { CadastroClientesComponent } from './cadastro-clientes/cadastro-clientes
     ContentComponent,
     FooterComponent,
     CadastroClientesComponent,
+    HomeLogadaComponent,
+    AcessoNegadoComponent,
+    // LoginComponent,
+    CadastroConcluidoComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MatDialogModule,
     AppRoutingModule,
+    ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
