@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import * as Typed from 'typed.js';
+import Typed from 'typed.js';
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
